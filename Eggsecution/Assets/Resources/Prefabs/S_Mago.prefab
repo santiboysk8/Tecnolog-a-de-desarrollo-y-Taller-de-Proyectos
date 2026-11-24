@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &121078843584249018
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4341075763308047159, guid: 50d8a9b5093f5664f86af567c302e55b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5207729915498106852, guid: 01cacd77943da714fbc3cb8198176087, type: 3}
+    - target: {fileID: 4341075763308047159, guid: 50d8a9b5093f5664f86af567c302e55b, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341075763308047159, guid: 50d8a9b5093f5664f86af567c302e55b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341075763308047159, guid: 50d8a9b5093f5664f86af567c302e55b, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341075763308047159, guid: 50d8a9b5093f5664f86af567c302e55b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422022665256397728, guid: 50d8a9b5093f5664f86af567c302e55b, type: 3}
+      propertyPath: m_Height
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422022665256397728, guid: 50d8a9b5093f5664f86af567c302e55b, type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148224732316084200, guid: 50d8a9b5093f5664f86af567c302e55b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148224732316084200, guid: 50d8a9b5093f5664f86af567c302e55b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148224732316084200, guid: 50d8a9b5093f5664f86af567c302e55b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148224732316084200, guid: 50d8a9b5093f5664f86af567c302e55b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148224732316084200, guid: 50d8a9b5093f5664f86af567c302e55b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148224732316084200, guid: 50d8a9b5093f5664f86af567c302e55b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148224732316084200, guid: 50d8a9b5093f5664f86af567c302e55b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148224732316084200, guid: 50d8a9b5093f5664f86af567c302e55b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148224732316084200, guid: 50d8a9b5093f5664f86af567c302e55b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148224732316084200, guid: 50d8a9b5093f5664f86af567c302e55b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148224732316084200, guid: 50d8a9b5093f5664f86af567c302e55b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148224732316084200, guid: 50d8a9b5093f5664f86af567c302e55b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148224732316084200, guid: 50d8a9b5093f5664f86af567c302e55b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8978825807767466088, guid: 50d8a9b5093f5664f86af567c302e55b, type: 3}
+      propertyPath: m_Name
+      value: S_Mago
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8978825807767466088, guid: 50d8a9b5093f5664f86af567c302e55b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6675482765325322132}
+  m_SourcePrefab: {fileID: 100100000, guid: 50d8a9b5093f5664f86af567c302e55b, type: 3}
+--- !u!1 &9022146088851836114 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8978825807767466088, guid: 50d8a9b5093f5664f86af567c302e55b, type: 3}
+  m_PrefabInstance: {fileID: 121078843584249018}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-6675482765325322132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9022146088851836114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f0704b4210b9147a80660831bcd8fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RolMago
+  _recursoMaximo: 100
+  _fireball: {fileID: 8795000869257491440, guid: 47bcd9d62c0f391439ba015584650861, type: 3}
+  _tiempoEntreAtaques: 0.4
+  _regeneracionPorSegundo: 5
+  _costeHabilidad1: 30
+  _bolasTriple: 3
+  _aperturaTriple: 30
+  _costeHabilidad2: 50
+  _escalaGigante: 3
+  _cooldownGigante: 4
