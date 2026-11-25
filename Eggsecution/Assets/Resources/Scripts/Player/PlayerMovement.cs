@@ -94,8 +94,13 @@ public class PlayerMovement : Personaje // CAMBIA: antes MonoBehaviour. Personaj
     // NUEVO: qué pasa cuando el jugador muere
     protected override void Morir()
     {
-        base.Morir();        // Lo común: marcar muerto y avisar (la barra se vacía)
-        Destroy(gameObject); // OnDisable lo saca de Jugadores y CameraFollow limpia los destruidos
+        base.Morir();
+        if(ZoneManager.Instance != null)
+        {
+            ZoneManager.Instance.PlayerDied();
+        }
+        Destroy(gameObject, 0.5f);
+
     }
     public void Aim (InputAction.CallbackContext _context) //Apuntado del personaje con el Mouse y Joystick
     {
@@ -153,6 +158,7 @@ public class PlayerMovement : Personaje // CAMBIA: antes MonoBehaviour. Personaj
     // NUEVO: el ataque lo hace el rol. PlayerMovement no sabe si es mago o pistolero: cada uno hace "su" Atacar
     public void Attack(InputAction.CallbackContext _context)
     {
+        if(_muerto) return; 
         if (_context.performed && _rol != null)
         {
             _rol.Atacar();
@@ -162,6 +168,7 @@ public class PlayerMovement : Personaje // CAMBIA: antes MonoBehaviour. Personaj
     // NUEVO: igual con las habilidades. Si el rol no tiene habilidad, sale el mensaje por defecto de Rol
     public void Habilidad1(InputAction.CallbackContext _context)
     {
+        if(_muerto) return;
         if (_context.performed && _rol != null)
         {
             _rol.Habilidad1();
@@ -170,6 +177,7 @@ public class PlayerMovement : Personaje // CAMBIA: antes MonoBehaviour. Personaj
 
     public void Habilidad2(InputAction.CallbackContext _context)
     {
+        if(_muerto) return;
         if (_context.performed && _rol != null)
         {
             _rol.Habilidad2();
@@ -178,6 +186,7 @@ public class PlayerMovement : Personaje // CAMBIA: antes MonoBehaviour. Personaj
 
     public void Dash(InputAction.CallbackContext _context)
     {
+        if(_muerto) return;
         if (_context.performed && !_dashActive)
         {
            StartCoroutine(IniciarDash(_lastMoveDirection));
@@ -214,6 +223,11 @@ public class PlayerMovement : Personaje // CAMBIA: antes MonoBehaviour. Personaj
     // NUEVO: FixedUpdate: APLICAR la física. Unity lo llama a ritmo fijo (50 veces/s), sincronizado con el motor de física
     private void FixedUpdate()
     {
+        if (_muerto)
+        {
+            _rb.linearVelocity = Vector2.zero;
+            return;
+        }
         if (_isDashing)
         {
             float dashSpeed = _dashDistance / Mathf.Max(_dashDuration, 0.01f); // Velocidad = distancia / tiempo (evita dividir entre 0)

@@ -41,7 +41,7 @@ public class MenuManager : MonoBehaviour
     private void OnPlay()
     {
         Time.timeScale = 1;
-        // CAMBIA: antes LoadScene(1). Con el nombre no se rompe si cambia el orden de la lista de escenas
+        RunData.CurrentZone = 0; 
         SceneManager.LoadScene(_escenaSiguiente);
     }
 

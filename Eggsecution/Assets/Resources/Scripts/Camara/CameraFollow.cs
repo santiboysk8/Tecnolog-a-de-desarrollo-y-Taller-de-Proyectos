@@ -109,4 +109,14 @@ public class CameraFollow : MonoBehaviour
             player.position = dentro;
         }
     }
+
+    public void SnapToLeader()
+    {
+        _players.RemoveAll(p => p == null); 
+        if(_players.Count == 0) return;
+
+        Transform leader = _players[0];
+        transform.position = new Vector3(leader.position.x, leader.position.y, _zOffset);
+        _velocity = Vector3.zero;
+    }
 }

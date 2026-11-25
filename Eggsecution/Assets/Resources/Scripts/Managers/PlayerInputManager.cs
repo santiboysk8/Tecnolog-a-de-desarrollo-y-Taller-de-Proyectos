@@ -5,7 +5,6 @@ public class PlayerInputManager : MonoBehaviour
 {
     // NUEVO: un prefab por rol. MISMO ORDEN que el enum TipoRol: [0] Boxeador, [1] Mago, [2] Espadachin, [3] Pistolero
     [SerializeField] private GameObject[] _prefabsRoles;
-    [SerializeField] private Transform[] _spawnPoints;
     [SerializeField] private BarraVida[] _barrasVida; 
   
 
@@ -32,7 +31,8 @@ public class PlayerInputManager : MonoBehaviour
         }
         ColocarEnSpawn(player, 0);
         CameraFollow.Instance.AddPlayer(player.transform);
-        AsignarBarra(player, 0); // NUEVO: conecta la barra de vida del J1
+        CameraFollow.Instance.SnapToLeader();
+        AsignarBarra(player, 0); 
         Debug.Log("Jugador 1 (" + RolJ1 + ") con teclado + ratón"); // CAMBIA: muestra el rol realmente usado
     }
 
@@ -86,12 +86,14 @@ public class PlayerInputManager : MonoBehaviour
 
     private void ColocarEnSpawn(PlayerInput player, int indice)
     {
-        if (_spawnPoints == null || indice >= _spawnPoints.Length)
+        if (ZoneManager.Instance == null)
         {
             return;
         }
-        player.transform.position = _spawnPoints[indice].position;
+        player.transform.position = ZoneManager.Instance.GetSpawnPosition(indice);
         Physics2D.SyncTransforms(); 
     }
+
+ 
 
 }
